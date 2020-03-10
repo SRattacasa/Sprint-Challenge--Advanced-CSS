@@ -1,1 +1,34 @@
 // Mixins Here
+.mixinbutton() { 
+    background-color: black;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    // .padmixin();
+    border-radius: @sevenpixels;
+    width: fit-content;
+}
+
+.padmixin(@pixsize1, @pixsize2) { 
+    padding: @pixsize1 @pixsize2;
+}
+
+.flexdisplaymixin() { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.responsivemixin() { 
+   @media @mobile { 
+           flex-direction: column;
+           flex-wrap: wrap;
+           width: 100%;
+           margin: 0;
+           justify-content: center;
+           align-items: center;
+   }
+}
+
